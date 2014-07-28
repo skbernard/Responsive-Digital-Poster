@@ -3,9 +3,9 @@
 <polymer-element name="chart-element" attributes="chartID chartTitle">
     <template>
         <style>
-            :host {display: block; position: relative; background-color: #dddddd; width: 100%; margin: 20px 00px 20px 00px;}
+            :host {display: block; position: relative; background-color: #f9f9f9; width: 100%; margin: 20px 00px 20px 00px;}
 
-            .chartTitle {background: #60708d; padding: 10px; color: grey; text-align: center; }
+            .chartTitle {background: #d8e6ff; padding: 10px; color: grey; text-align: center; }
 /*
             .boxContent {padding: 10px; color: grey; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 1.0rem; line-height: 1.6rem; margin: 0px;}
             .boxContent ::content >p            {padding: 00px 00px 10px 00px; margin: 0 0 0 0;}
@@ -21,7 +21,7 @@
         </style>
 
         <div class='chartTitle'>{{chartTitle}}</div>
-        <canvas id="{{chartID}}"></canvas>
+        <canvas id="{{chartID}}" width="100%" height="100%"></canvas>
         <div id="{{chartID}}Legend"></div>
 
     </template>
