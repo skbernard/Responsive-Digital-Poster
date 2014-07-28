@@ -1,0 +1,30 @@
+<link rel="import" href="components/polymer/polymer.html">
+
+<polymer-element name="chart-element" attributes="chartID chartTitle">
+    <template>
+        <style>
+            :host {display: block; position: relative; background-color: #dddddd; width: 100%; margin: 20px 00px 20px 00px;}
+
+            .chartTitle {background: #60708d; padding: 10px; color: grey; text-align: center; }
+
+            .boxContent {padding: 10px; color: grey; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 1.0rem; line-height: 1.6rem; margin: 0px;}
+            .boxContent ::content >p            {padding: 00px 00px 10px 00px; margin: 0 0 0 0;}
+            .boxContent ::content >ul           {padding: 00px 00px 10px 20px; margin: 0 0 0 0; list-style-type: disc;}
+            .boxContent ::content >ul>li        {padding: 00px 00px 10px 00px; margin: 0 0 0 0;}
+            .boxContent ::content >ul>ol        {padding: 00px 00px 00px 30px; margin: 0 0 0 0;}
+            .boxContent ::content >ul>ol>li     {padding: 00px 00px 05px 00px; margin: 0 0 0 0;}
+            .boxContent ::content >ol>li        {padding: 00px 00px 10px 00px; margin: 0 0 0 0;}
+            .boxContent ::content >img          {padding: 00px 00px 10px 00px; margin: 0 0 0 0; width: 100%;}
+            .boxContent ::content >canvas       {padding: 10px 00px 10px 00px; margin: 0 0 0 0;}
+            .boxContent ::content >div>span     {padding: 02px 02px 02px 02px; margin: 2px 2px 2px 2px; float: left;}
+        </style>
+
+        <div class='chartTitle'>{{chartTitle}}</div>
+        <canvas id="{{chartID}}"></canvas>
+        <div id="{{chartID}}Legend"></div>
+
+    </template>
+    <script>
+        Polymer({});
+    </script>
+</polymer-element>
