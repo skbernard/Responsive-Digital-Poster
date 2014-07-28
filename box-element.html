@@ -1,0 +1,31 @@
+﻿<link rel="import" href="components/polymer/polymer.html">
+
+<polymer-element name="box-element" attributes="boxTitle">
+    <template>
+        <style>
+        :host {display: block; position: relative; background-color: white; width: 100%; font-weight: 300; box-shadow: 1px 1px 5px #4c4c4c; margin-bottom: 20px;}
+
+        .boxTitle       {background: #004b8d; padding: 10px; color: #ffffff; text-align: center; }
+            .boxTitle>h1    {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold; line-height: 18px; margin: 0px;}
+
+        .boxContent {padding: 10px; color: grey; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 1.0rem; line-height: 1.6rem; margin: 0px;}
+            .boxContent ::content >p            {padding: 00px 00px 10px 00px; margin: 0 0 0 0;}
+            .boxContent ::content >ul           {padding: 00px 00px 10px 20px; margin: 0 0 0 0; list-style-type: disc;}
+            .boxContent ::content >ul>li        {padding: 00px 00px 10px 00px; margin: 0 0 0 0;}
+            .boxContent ::content >ul>ol        {padding: 00px 00px 00px 30px; margin: 0 0 0 0;}
+            .boxContent ::content >ul>ol>li     {padding: 00px 00px 05px 00px; margin: 0 0 0 0;}
+            .boxContent ::content >ol>li        {padding: 00px 00px 10px 00px; margin: 0 0 0 0;}
+            .boxContent ::content >img          {padding: 00px 00px 10px 00px; margin: 0 0 0 0; width: 100%;}
+            .boxContent ::content >canvas       {padding: 10px 00px 10px 00px; margin: 0 0 0 0;}
+            .boxContent ::content >div>span     {padding: 02px 02px 02px 02px; margin: 2px 2px 2px 2px; float: left;}
+        </style>
+
+        <div class='boxTitle'><h1>{{boxTitle}}</h1></div>
+        <div class='boxContent'>
+          <content></content>
+        </div>
+    </template>
+    <script>
+        Polymer({});
+    </script>
+</polymer-element>

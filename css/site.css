@@ -1,0 +1,48 @@
+
+html,body         {height: 100%; margin: 0; background-color: #E5E5E5; font-family: sans-serif; font-size: 100%;}
+
+core-header-panel {height: 100%; overflow: auto; -webkit-overflow-scrolling: touch; background: #a6a6a6;}
+    .core-header      {height: 55px;   background: #004b8d; padding: 5px; color: #ffffff; transition: height 0.2s;}
+    .core-header.tall {height: 130px;}
+    #header           {overflow: hidden;}
+
+    .container        {width: 93%; margin: 15px auto;}
+    .legend           {height: 80px; padding: 00px 00px 15px 00px;}
+
+
+/*-------------  TEXT/FONT STYLES  -------------*/
+.headerTitle      {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 1.4rem; font-weight: bolder; text-align: left;  line-height: 1.6rem; color: #ffffff; margin: 2px 2px 0px 2px;}
+.headerAuthor     {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 0.8rem; font-weight: bold;   text-align: right; line-height: 1.0rem; color: #ffffff; margin: 10px 2px 2px 2px;}
+.headerSubAuthor  {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 0.8rem; font-weight: normal; text-align: right; line-height: 1.0rem; color: #ffffff; margin: 0px 2px 2px 2px;}
+
+
+
+
+/* for 980px or less */
+@media screen and (max-width: 980px) {
+    core-header-panel {background: #a6745f;}
+    html,body           {font-size: 100%;}
+    .core-header      {height: 55px;}
+    .core-header.tall {height: 130px;}
+    .headerAuthor     {margin: 5px 2px 2px 2px;}
+}
+
+/* for 700px or less - iPhone Landscape */
+@media screen and (max-width: 700px) {
+    core-header-panel {background: #a66570;}
+    html,body         {font-size: 90%;}
+    .core-header      {height: 70px;}
+    .core-header.tall {height: 165px;}
+    .headerAuthor     {margin: 2px 2px 2px 2px;}
+}
+
+/* for 480px or less - iPhone Portrait*/
+@media screen and (max-width: 480px) {
+    core-header-panel {background: #4c3e5b;}
+    html,body         {font-size: 80%;}
+    .core-header      {height: 85px;}
+    .core-header.tall {height: 170px;}
+    .headerAuthor     {margin: 10px 2px 2px 2px;}
+
+}
+
