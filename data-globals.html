@@ -1,0 +1,22 @@
+<link rel="import" href="components/polymer/polymer.html">
+
+<polymer-element name="data-globals">
+    <script>
+        (function() {
+            var dataFigure1 = [
+                {label: "Pharma Company",   title: "PharmaCompany",  value: 48.6,   color: "#004b8d",   highlight: "#004b8d"},
+                {label: "Med Comms",        title: "MedComms",       value: 40.5,   color: "#f8991d",   highlight: "#f8991d"},
+                {label: "Other",            title: "Other",          value: 7.2,    color: "#a4b2d4",   highlight: "#a4b2d4"},
+                {label: "Publisher",        title: "Publisher",      value: 3.6,    color: "#c1c5c9",   highlight: "#c1c5c9"},
+                {label: "Device Company",   title: "DeviceCompany",  value: 1,      color: "#ffce90",   highlight: "#ffce90"}
+            ];
+
+            Polymer('data-globals', {
+                ready: function() {
+                    this.dataFigure1 = dataFigure1;
+                }
+            });
+        })();
+    </script>
+</polymer-element>
+

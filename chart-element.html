@@ -1,26 +1,63 @@
 <link rel="import" href="components/polymer/polymer.html">
+<link rel="import" href="data-globals.html"/>
 <script src="components/chartsJS/chart.js"></script>
 <script src="components/chartsJS/legend.js"></script>
 <script src="scripts/figures.js"></script>
 
-<polymer-element name="chart-element" attributes="chartID chartTitle">
+<polymer-element name="chart-element" attributes="chartID chartClass chartTitleBold chartTitle dataID">
     <template>
+        <data-globals id="globals"></data-globals>
         <style>
-            :host {display: block; position: relative; background-color: #f9f9f9; margin: 20px -10px 20px -10px; padding: 10px 20px 10px 20px;}
+            :host {display: block; position: relative; background-color: #f9f9f9; width: 100%; padding: 05px 05px 05px 05px;}
 
             .chartTitle {color: grey; text-align: left; }
-            .content    {padding: 20px 00px 10px 00px; align: center;}
+            .content    {padding: 05px 00px 05px 00px; align: center;}
 
         </style>
 
-        <div class='chartTitle'>{{chartTitle}}</div>
+        <div class='chartTitle'><b>{{chartTitleBold}}</b> {{chartTitle}}</div>
         <div class="content">
-            <content select="canvas"></content>
+            <canvas id="{{chartID}}" class="pieChart"></canvas>
         </div>
-        <div id="{{chartID}}Legend"></div>
+        <!--<div id="{{chartID}}Legend"></div>-->
 
     </template>
     <script>
-        Polymer('chart-element', {});
+        Polymer('chart-element', {
+            domReady: function () {
+
+                alert("plerb: "+this.chartID);
+
+                var dataFigure1 = [
+                    {label: "Pharma Company",   title: "PharmaCompany",  value: 48.6,   color: "#004b8d",   highlight: "#004b8d"},
+                    {label: "Med Comms",        title: "MedComms",       value: 40.5,   color: "#f8991d",   highlight: "#f8991d"},
+                    {label: "Other",            title: "Other",          value: 7.2,    color: "#a4b2d4",   highlight: "#a4b2d4"},
+                    {label: "Publisher",        title: "Publisher",      value: 3.6,    color: "#c1c5c9",   highlight: "#c1c5c9"},
+                    {label: "Device Company",   title: "DeviceCompany",  value: 1,      color: "#ffce90",   highlight: "#ffce90"}
+                ];
+
+                new Chart(this.$.figure1.getContext('2d')).Pie(dataFigure1);
+
+
+/*                var chartElement = $('#chartElement');
+              var canvasElement = $('#canvas');
+
+                var dimensionX  = chartElement.width();
+                var dimensionY  = chartElement.height();
+
+                alert("chartElement x: " + dimensionX);
+                alert("chartElement y: " + dimensionY);
+
+                canvasElement.attr("width", dimensionX);
+                canvasElement.attr("height", dimensionX);
+
+                alert("figure1 x: " + canvasElement.attr("width"));
+                alert("figure1 y: " + canvasElement.attr("height"));
+
+                var ctx = $("#canvas")[0].getContext('2d');
+                new Chart(ctx).Pie(dataFigure1);
+ */
+            }
+       });
     </script>
 </polymer-element>

@@ -4,6 +4,7 @@
     <title>Digital Poster - Pass 2: Responsive</title>
     <meta name="viewport" content="width=device-width, minimal-ui, minimum-scale=1, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <script src="components/platform/platform.js"></script>
+    <script src="components/jquery/jquery.min.js"></script>
     <script src="components/chartsJS/chart.js"></script>
     <script src="components/chartsJS/legend.js"></script>
     <script src="scripts/figures.js"></script>
@@ -111,10 +112,7 @@
             </ul>
 
 
-            <chart-element chartID="figure1" chartTitle="Figure 1: Field of Employment">
-                <canvas id="figure1" class="pieChart"></canvas>
-            </chart-element>
-
+            <chart-element chartTitleBold = "Figure 1:" chartTitle="Field of Employment" chartID="figure1" chartClass="pieChart" dataID="dataFigure1"></chart-element>
 
 
             <b>Experience with Interactive Poster Presentations and Quick Response (QR) Codes</b>

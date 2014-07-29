@@ -1,9 +1,21 @@
-if(!!(window.addEventListener)) window.addEventListener('DOMContentLoaded', main);
+if(!!(window.addEventListener)) window.addEventListener('WebComponentsReady', main);
 else window.attachEvent('onload', main);
 
 function main(){renderCharts();}
 
 function renderCharts() {
+/*
+    var dimensionX  = $('#chartElement').width();
+    var dimensionY  = $('#chartElement').height();
+    var chartCanvas = document.getElementById("figure1");
+
+    alert(dimensionX);
+    alert(dimensionY);
+
+    chartCanvas.width  = dimensionX;
+    chartCanvas.height = dimensionX;
+*/
+    Chart.defaults.global.responsive = true;
 
     var dataFigure1 = [
         {label: "Pharma Company",   title: "PharmaCompany",  value: 48.6,   color: "#004b8d",   highlight: "#004b8d"},
@@ -13,9 +25,9 @@ function renderCharts() {
         {label: "Device Company",   title: "DeviceCompany",  value: 1,      color: "#ffce90",   highlight: "#ffce90"}
     ];
 
-    var ctx = document.getElementById("figure1").getContext("2d");
-    new Chart(ctx).Pie(dataFigure1);
-    legend(document.getElementById("figure1Legend"), dataFigure1);
+//    var ctx = document.getElementById("figure1").getContext("2d");
+//    new Chart(ctx).Pie(dataFigure1);
+//    legend(document.getElementById("figure1Legend"), dataFigure1);
 
 
 
