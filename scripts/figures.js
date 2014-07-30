@@ -15,7 +15,6 @@ function renderCharts() {
     chartCanvas.width  = dimensionX;
     chartCanvas.height = dimensionX;
 */
-    Chart.defaults.global.responsive = true;
 
     var dataFigure1 = [
         {label: "Pharma Company",   title: "PharmaCompany",  value: 48.6,   color: "#004b8d",   highlight: "#004b8d"},

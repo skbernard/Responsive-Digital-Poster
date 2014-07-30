@@ -7,7 +7,6 @@
     <script src="components/jquery/jquery.min.js"></script>
     <script src="components/chartsJS/chart.js"></script>
     <script src="components/chartsJS/legend.js"></script>
-    <script src="scripts/figures.js"></script>
 
     <link rel="import" href="components/core-header-panel/core-header-panel.html">
     <link rel="import" href="components/core-toolbar/core-toolbar.html">
@@ -112,7 +111,7 @@
             </ul>
 
 
-            <chart-element chartTitleBold = "Figure 1:" chartTitle="Field of Employment" chartID="figure1" chartClass="pieChart" dataID="dataFigure1"></chart-element>
+            <chart-element chartTitleBold = "Figure 1:" chartTitle="Field of Employment" chartType="Pie" chartData="dataFigure1"></chart-element>
 
 
             <b>Experience with Interactive Poster Presentations and Quick Response (QR) Codes</b>
@@ -143,17 +142,9 @@
                 </ol>
             </ul>
 
-            <b>Figure 2a:</b> Does your company currently work with or utilize interactive posters?
-            <canvas id="figure2a" width="263px" height="263"></canvas>
-            <div id="figure2aLegend"></div>
-
-            <b>Figure 2b:</b> Does your company work with or utilize QR codes?
-            <canvas id="figure2b" width="263px" height="263"></canvas>
-            <div id="figure2bLegend"></div>
-
-            <b>Figure 3:</b> How often do you view interactive poster presentations during a national or international medical/scientific congress?
-            <canvas id="figure3" width="263px" height="263"></canvas>
-            <div id="figure3Legend"></div>
+            <chart-element chartTitleBold = "Figure 2a:" chartTitle="Does your company currently work with or utilize interactive posters?" chartType="Pie" chartData="dataFigure2a"></chart-element>
+            <chart-element chartTitleBold = "Figure 2b:" chartTitle="Does your company work with or utilize QR codes?" chartType="Pie" chartData="dataFigure2b"></chart-element>
+            <chart-element chartTitleBold = "Figure 3:"  chartTitle="How often do you view interactive poster presentations during a national or international medical/scientific congress?" chartType="Pie" chartData="dataFigure3"></chart-element>
 
         </box-element>
 
@@ -176,20 +167,10 @@
                     slowly adopt this technology (56.9% [62] and 63.9% [69], respectively) <b>Figure 7.</b></li>
             </ul>
 
-
-            <b>Figure 4:</b> Advantages for utilizing interactive over printed posters
-            <canvas id="figure4" width="263px" height="400"></canvas>
-
-            <b>Figure 5:</b> What are the greatest disadvantages of non-traditional interactive poster presentations? (select all that apply)
-            <canvas id="figure5" width="263px" height="400"></canvas>
-
-            <b>Figure 6:</b> What the largest hurdle to overcome in the acceptance of interactive posters as the norm in medical/scientific congresses?
-            <canvas id="figure6" width="263px" height="263"></canvas>
-            <div id="figure6Legend"></div>
-
-            <b>Figure 7:</b> The future of interactive posters at medical/scientific congresses
-            <canvas id="figure7" width="263px" height="263"></canvas>
-            <div id="figure7Legend"></div>
+            <chart-element chartTitleBold = "Figure 4:" chartTitle="Advantages for utilizing interactive over printed posters" chartType="Bar" chartData="dataFigure4"></chart-element>
+            <chart-element chartTitleBold = "Figure 5:" chartTitle="What are the greatest disadvantages of non-traditional interactive poster presentations? (select all that apply)" chartType="Bar" chartData="dataFigure5"></chart-element>
+            <chart-element chartTitleBold = "Figure 6:" chartTitle="What the largest hurdle to overcome in the acceptance of interactive posters as the norm in medical/scientific congresses?" chartType="Pie" chartData="dataFigure6"></chart-element>
+            <chart-element chartTitleBold = "Figure 7:" chartTitle="The future of interactive posters at medical/scientific congresses" chartType="Pie" chartData="dataFigure7"></chart-element>
 
         </box-element>
 
