@@ -23,11 +23,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.52021855" vertical-offset="17" max-vertical-offset="3655">
+            <state vertical-scroll-proportion="-18.307692" vertical-offset="17" max-vertical-offset="3655">
               <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="site.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/site.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5702306" vertical-offset="0" max-vertical-offset="954">
+              <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -76,13 +86,13 @@
         <option value="$PROJECT_DIR$/post-card.html" />
         <option value="$PROJECT_DIR$/components/box-element/box-element.html" />
         <option value="$PROJECT_DIR$/box-element.html" />
-        <option value="$PROJECT_DIR$/css/site.css" />
         <option value="$PROJECT_DIR$/components/chartsJS/chart.js" />
         <option value="$PROJECT_DIR$/scripts/data-globals.html" />
         <option value="$PROJECT_DIR$/data-globals.html" />
         <option value="$PROJECT_DIR$/scripts/figures.js" />
         <option value="$PROJECT_DIR$/chart-element.html" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/site.css" />
       </list>
     </option>
   </component>
@@ -409,14 +419,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/site.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19601677" vertical-offset="0" max-vertical-offset="954">
-          <caret line="11" column="71" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/chartsJS/chart.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5167715" vertical-offset="918" max-vertical-offset="56253">
@@ -454,8 +456,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52021855" vertical-offset="17" max-vertical-offset="3655">
+        <state vertical-scroll-proportion="-18.307692" vertical-offset="17" max-vertical-offset="3655">
           <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/site.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5702306" vertical-offset="0" max-vertical-offset="954">
+          <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
           <folding />
         </state>
       </provider>

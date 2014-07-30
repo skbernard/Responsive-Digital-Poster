@@ -22,7 +22,7 @@ core-header-panel {height: 100%; overflow: auto; -webkit-overflow-scrolling: tou
 
 /* for 980px or less */
 @media screen and (max-width: 980px) {
-    core-header-panel {background: #a6745f;}
+    core-header-panel {background: #a6a6a6;}
     html,body           {font-size: 100%;}
     .core-header      {height: 55px;}
     .core-header.tall {height: 130px;}
@@ -31,7 +31,7 @@ core-header-panel {height: 100%; overflow: auto; -webkit-overflow-scrolling: tou
 
 /* for 700px or less - iPhone Landscape */
 @media screen and (max-width: 700px) {
-    core-header-panel {background: #a66570;}
+    core-header-panel {background: #a6a6a6;}
     html,body         {font-size: 90%;}
     .core-header      {height: 70px;}
     .core-header.tall {height: 165px;}
@@ -40,7 +40,7 @@ core-header-panel {height: 100%; overflow: auto; -webkit-overflow-scrolling: tou
 
 /* for 480px or less - iPhone Portrait*/
 @media screen and (max-width: 480px) {
-    core-header-panel {background: #4c3e5b;}
+    core-header-panel {background: #a6a6a6;}
     html,body         {font-size: 80%;}
     .core-header      {height: 85px;}
     .core-header.tall {height: 170px;}
