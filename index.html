@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="css/site.css"/>
 
     <script type="text/javascript">
-
         /*SCROLLABLE BACKGROUND PAGE HACK - PREVENTS WHOLE APP SCROLLING*/
         document.addEventListener('touchmove', function(event)
         {
@@ -24,12 +23,10 @@
             { event.preventDefault(); }
         }, false);
 
-
         /*IOS 7.1 MINIMAL UI LANDSCAPE HACK - PREVENTS GREY BAR ON LANDSCAPE ORIENTATION CHANGE*/
         window.addEventListener("orientationchange", function() {
             window.scrollTo(0, 0);
         }, false);
-
     </script>
 
 </head>
@@ -206,7 +203,5 @@
         </box-element>
     </div>
   </core-header-panel>
-
 </body>
-
 </html>
