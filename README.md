@@ -1,5 +1,5 @@
-Responsive-Digital-Poster - Polymer Core-Drawer Implementation
-=========================
+Polymer <core-drawer-panel> Implementation
+==========================================
 
 an attempted proof of concept digitization of a standard scientific poster
 
