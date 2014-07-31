@@ -8,4 +8,4 @@ Chart.js is extended through the use of legend.js an extended branch to faciliat
 
 this branch will focus on adding the Polymer core-drawer functionality to enhance navigation throughout the poster
 
-Responsive Digital Poster
+
