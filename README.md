@@ -1,4 +1,4 @@
-Polymer core-drawer-panel Implementation
+polymer core-drawer-panel Implementation
 ==========================================
 
 an attempted proof of concept digitization of a standard scientific poster
