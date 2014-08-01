@@ -10,7 +10,7 @@ core-header-panel {height: 100%; overflow: auto; -webkit-overflow-scrolling: tou
     .container        {width: 93%; margin: 15px auto;}
     .legend           {height: 80px; padding: 00px 00px 15px 00px;}
 
-    .menu             {background: #ebf0f7; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 1.2rem; font-weight: bolder; text-align: left;  line-height: 1.6rem; color: #707070;}
+    .menu             {background: #ebf0f7; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 1.2rem; font-weight: bolder; text-align: left;  line-height: 1.6rem; color: #707070; overflow: scroll; -webkit-overflow-scrolling: touch;}
     .menuItem         {margin: 0 0 0 0; padding: 10px 40px 10px 25px; border-top: 2px solid #e9e9e9; border-bottom: 1px solid #c1c1c1;}
     .menuItem>a       {color: #707070; text-decoration: none;}
     .menuTitle        {margin: 0 0 0 0; padding: 10px 10px 10px 25px; border-bottom: 1px solid #696969; background: #008aff; color: white; font-size: 1.4rem;}
