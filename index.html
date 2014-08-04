@@ -31,46 +31,33 @@
             window.scrollTo(0, 0);
         }, false);
 
-        /*ANCHOR TAG SMOOTH SCROLL*/
-        $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-                    || location.hostname == this.hostname) {
-
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
+        function urlReplace(url) {
+            window.history.replaceState(null, null, "#" + url)
+        }
     </script>
-
 </head>
 
 <body unresolved touch-action="auto">
 <core-drawer-panel>
     <div drawer class="menu">
         <div class="menuTitle">Menu</div>
-        <div class="menuItem"><a href="#abstract">ABSTRACT</a></div>
-        <div class="menuItem"><a href="#background">BACKGROUND</a></div>
-        <div class="menuItem"><a href="#objective">OBJECTIVE</a></div>
-        <div class="menuItem"><a href="#reference">RESEARCH & DESIGN METHODS</a></div>
-        <div class="menuItem"><a href="#results1">RESULTS</a></div>
-        <div class="menuItem"><a href="#interactive">UTILIZING INTERACTIVE POSTERS - NOW AND IN THE FUTURE</a></div>
-        <div class="menuItem"><a href="#results2">RESULTS</a></div>
-        <div class="menuItem"><a href="#conclusion">CONCLUSIONS</a></div>
-        <div class="menuItem"><a href="#reference">REFERENCES</a></div>
-        <div class="menuItem"><a href="#acknowledge">ACKNOWLEDGEMENTS</a></div>
-        <div class="menuItem"><a href="#reference">RESEARCH & DESIGN METHODS</a></div>
-        <div class="menuItem"><a href="#results1">RESULTS</a></div>
-        <div class="menuItem"><a href="#interactive">UTILIZING INTERACTIVE POSTERS - NOW AND IN THE FUTURE</a></div>
-        <div class="menuItem"><a href="#results2">RESULTS</a></div>
-        <div class="menuItem"><a href="#conclusion">CONCLUSIONS</a></div>
-        <div class="menuItem"><a href="#reference">REFERENCES</a></div>
-        <div class="menuItem"><a href="#acknowledge">ACKNOWLEDGEMENTS</a></div>
+        <div class="menuItem"><a href="#abstract"   onclick="urlReplace('abstract')">ABSTRACT</a></div>
+        <div class="menuItem"><a href="#background" onclick="urlReplace('background')">BACKGROUND</a></div>
+        <div class="menuItem"><a href="#objective"  onclick="urlReplace('objective')">OBJECTIVE</a></div>
+        <div class="menuItem"><a href="#research"   onclick="urlReplace('research')">RESEARCH & DESIGN METHODS</a></div>
+        <div class="menuItem"><a href="#results1"   onclick="urlReplace('results1')">RESULTS</a></div>
+        <div class="menuItem"><a href="#int"        onclick="urlReplace('int')">UTILIZING INTERACTIVE POSTERS - NOW AND IN THE FUTURE</a></div>
+        <div class="menuItem"><a href="#results2"   onclick="urlReplace('results2')">RESULTS</a></div>
+        <div class="menuItem"><a href="#conc"       onclick="urlReplace('conc')">CONCLUSIONS</a></div>
+        <div class="menuItem"><a href="#references" onclick="urlReplace('references')">REFERENCES</a></div>
+        <div class="menuItem"><a href="#ack"        onclick="urlReplace('ack')">ACKNOWLEDGEMENTS</a></div>
+        <div class="menuItem"><a href="#references" onclick="urlReplace('references')">RESEARCH & DESIGN METHODS</a></div>
+        <div class="menuItem"><a href="#results1"   onclick="urlReplace('results1')">RESULTS</a></div>
+        <div class="menuItem"><a href="#int"        onclick="urlReplace('int')">UTILIZING INTERACTIVE POSTERS - NOW AND IN THE FUTURE</a></div>
+        <div class="menuItem"><a href="#results2"   onclick="urlReplace('results2')">RESULTS</a></div>
+        <div class="menuItem"><a href="#conc"       onclick="urlReplace('conc')">CONCLUSIONS</a></div>
+        <div class="menuItem"><a href="#references" onclick="urlReplace('references')">REFERENCES</a></div>
+        <div class="menuItem"><a href="#ack"        onclick="urlReplace('ack')">ACKNOWLEDGEMENTS</a></div>
     </div>
     <core-header-panel mode="waterfall-tall" main>
         <div id="header" class="core-header noBounce" >
@@ -80,9 +67,9 @@
             <h3 class="headerSubAuthor"><sup>2</sup>Scientific Affairs, Global Clinical Development + Medical Affairs, Boehringer Ingelheim, Ingelheim am Rhein, Germany</h3>
         </div>
 
-        <div class="container" layout vertical center>
+        <div class="container" id="container" layout vertical center>
 
-            <box-element boxTitle="ABSTRACT" ><a name="abstract"></a>
+            <box-element boxTitle="ABSTRACT" id="abstract">
                 <p><b>Objective:</b> To gain insight into the overall impact, acceptance, and utilization of
                     interactive digital poster presentations in medical/scientific congresses and to educate ISMPP
                     members on perceived advantages and disadvantages of this form of data communication.</p>
@@ -104,7 +91,7 @@
                     whether differences among guidelines emerge, as well as any potential compliance issues.</p>
             </box-element>
 
-            <box-element boxTitle="BACKGROUND" ><a name="background"></a>
+            <box-element boxTitle="BACKGROUND" id="background">
                 <ul>
                     <li>Presentation of data as a traditional printed poster at medical/scientific
                         congresses has remained an essentially unchanged format for decades.
@@ -125,7 +112,7 @@
                 </ul>
             </box-element>
 
-            <box-element boxTitle="OBJECTIVE"><a name="objective"></a>
+            <box-element boxTitle="OBJECTIVE" id="objective">
                 <ul>
                     <li>To gain insight into the overall impact, acceptance, and utilization of interactive digital poster presentations in medical/scientific congresses</li>
                     <li>To educate International Society of Medical Publication Professionals (ISMPP) members on perceived advantages and disadvantages of this form of data communication</li>
@@ -133,7 +120,7 @@
                 </ul>
             </box-element>
 
-            <box-element boxTitle="RESEARCH AND DESIGN METHODS"><a name="research"></a>
+            <box-element boxTitle="RESEARCH AND DESIGN METHODS" id="research">
                 <ul>
                     <li>A 10-question survey questionnaire was designed and circulated via e-mail by www.surveymonkey.com to all ISMPP members</li>
                     <li>Responses were invited between December 20, 2011 and January 9, 2012</li>
@@ -141,7 +128,7 @@
                 </ul>
             </box-element>
 
-            <box-element boxTitle="RESULTS"><a name="results1"></a>
+            <box-element boxTitle="RESULTS" id="results1">
                 <b>Respondent Employment Characteristics</b>
                 <ul>
                     <li>A total of 111 ISMPP members completed the survey</li>
@@ -186,8 +173,7 @@
 
             </box-element>
 
-            <box-element boxTitle="UTILIZING INTERACTIVE POSTERS – NOW AND IN THE FUTURE"><a name="interactive"></a>
-                <ul>
+            <box-element boxTitle="UTILIZING INTERACTIVE POSTERS – NOW AND IN THE FUTURE" id="int">
                     <li>Responses suggest the greatest potential advantages of interactive posters include increased
                         audience engagement (56.9%[58]), wider data dissemination (47.1%[48]), enhanced poster metric
                         tracking (49%[50]), and increased capacity for audio/visual presentation (67.6%[69]) <b>Figure 4.</b></li>
@@ -198,7 +184,7 @@
                 </ul>
             </box-element>
 
-            <box-element boxTitle="RESULTS"><a name="results2"></a>
+            <box-element boxTitle="RESULTS" id="results2">
                 <ul>
                     <li>The majority of respondents agree/strongly agree that interactive data presentation routes allow
                         for better communication of data versus traditional printed posters and that congresses will
@@ -212,7 +198,7 @@
 
             </box-element>
 
-            <box-element boxTitle="CONCLUSIONS"><a name="conclusion"></a>
+            <box-element boxTitle="CONCLUSIONS" id="conc">
                 <ul>
                     <li>Interactive poster technology is gaining a foothold in the dissemination of peer-reviewed
                         scientific data from pharmaceutical industry-sponsored studies: many congresses have begun to
@@ -227,7 +213,7 @@
                 </ul>
             </box-element>
 
-            <box-element boxTitle="REFERENCES"><a name="reference"></a>
+            <box-element boxTitle="REFERENCES" id="references">
                 <ol>
                     <li>Rowe N, Dragan I. What impact do posters have on academic knowledge transfer? A pilot survey
                         on author attitudes and experiences. <em>BMC Medical Education</em> 2009; 9:71.</li>
@@ -236,12 +222,13 @@
                 </ol>
             </box-element>
 
-            <box-element boxTitle="ACKNOWLEDGEMENT"><a name="acknowledge"></a>
+            <box-element boxTitle="ACKNOWLEDGEMENT" id="ack">
                 <p>The authors were fully responsible for all content and editorial decisions, were involved at all stages
                     of poster development, and have approved the final version. Graphic assistance, supported
                     financially by Boehringer Ingelheim Pharmaceuticals, Inc., was provided by Kathryn Coles, of
                     Envision Scientific Solutions during the preparation of this poster.</p>
             </box-element>
+            <div id="scrollToHere">Bottom!</div>
         </div>
     </core-header-panel>
 </core-drawer-panel>
