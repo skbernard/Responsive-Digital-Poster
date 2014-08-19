@@ -103,7 +103,7 @@
                 if(this.chartType=="Bar" || this.chartType=="bar")
                 {
                     if($(window).width()<481) {canvas.setAttribute("height","300"); canvas.setAttribute("style","height: 300px;");}
-                    new Chart(this.$.chart.getContext('2d')).Bar(eval(this.chartData));
+                    new Chart(this.$.chart.getContext('2d')).Bar(eval(this.chartData), {scaleBeginAtZero : false});
                     this.$.legend.style.display="none";
                 }
             }
