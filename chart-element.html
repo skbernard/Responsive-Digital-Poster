@@ -29,8 +29,6 @@
                 /*IOS CANVAS RENDER HACK*/
                 var canvas = document.createElement('canvas');
                 canvas.setAttribute("id","chart");
-                canvas.setAttribute("style","height: 300px;");
-                canvas.setAttribute("height","300px");
                 this.$.content.replaceChild(canvas, this.$.replace);
                 this.$.chart=canvas;
 
@@ -102,7 +100,12 @@
                 ];
 
                 if(this.chartType=="Pie" || this.chartType=="pie") {new Chart(this.$.chart.getContext('2d')).Pie(eval(this.chartData)); legend(this.$.legend, eval(this.chartData));} else
-                if(this.chartType=="Bar" || this.chartType=="bar") {new Chart(this.$.chart.getContext('2d')).Bar(eval(this.chartData)); this.$.legend.style.display="none";}
+                if(this.chartType=="Bar" || this.chartType=="bar")
+                {
+                    if($(window).width()<481) {canvas.setAttribute("height","300"); canvas.setAttribute("style","height: 300px;");}
+                    new Chart(this.$.chart.getContext('2d')).Bar(eval(this.chartData));
+                    this.$.legend.style.display="none";
+                }
             }
        });
     </script>
