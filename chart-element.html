@@ -29,6 +29,8 @@
                 /*IOS CANVAS RENDER HACK*/
                 var canvas = document.createElement('canvas');
                 canvas.setAttribute("id","chart");
+                canvas.setAttribute("style","height: 300px;");
+                canvas.setAttribute("height","300px");
                 this.$.content.replaceChild(canvas, this.$.replace);
                 this.$.chart=canvas;
 
