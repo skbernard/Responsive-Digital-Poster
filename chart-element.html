@@ -83,12 +83,12 @@
                         }]};
 
                 var dataFigure6 = [
-                    {label: "Associated Costs",             title: "AssociatedCosts",       value: 33.6,    color: "#f8991d",   highlight: "#f8991d"},
-                    {label: "Sponsor Company Policy",       title: "SponsorPolicy",         value: 9.3,     color: "#004b8d",   highlight: "#004b8d"},
-                    {label: "Congress Regulations",         title: "CongressRegulations",   value: 27.1,    color: "#a4b2d4",   highlight: "#a4b2d4"},
+                    {label: "Associated Costs",             title: "Associated Costs",       value: 33.6,    color: "#f8991d",   highlight: "#f8991d"},
+                    {label: "Sponsor Company Policy",       title: "Sponsor Policy",         value: 9.3,     color: "#004b8d",   highlight: "#004b8d"},
+                    {label: "Congress Regulations",         title: "Congress Regulations",   value: 27.1,    color: "#a4b2d4",   highlight: "#a4b2d4"},
                     {label: "Other",                        title: "Other",                 value: 11.5,    color: "#c1c5c9",   highlight: "#c1c5c9"},
-                    {label: "Author Presenter Reluctance",  title: "AuthorReluctance",      value: 12.1,    color: "#fcd5a7",   highlight: "#fcd5a7"},
-                    {label: "Technology Barriers",          title: "TechnologyBarrier",     value: 8.4,     color: "#fceddc",   highlight: "#fceddc"}
+                    {label: "Author Presenter Reluctance",  title: "Author Reluctance",      value: 12.1,    color: "#fcd5a7",   highlight: "#fcd5a7"},
+                    {label: "Technology Barriers",          title: "Technology Barrier",     value: 8.4,     color: "#fceddc",   highlight: "#fceddc"}
                 ];
 
                 var dataFigure7 = [
@@ -99,7 +99,11 @@
                     {label: "Other",                                                                title: "Other",             value: 12.1,    color: "#fcd5a7",   highlight: "#fcd5a7"}
                 ];
 
-                if(this.chartType=="Pie" || this.chartType=="pie") {new Chart(this.$.chart.getContext('2d')).Pie(eval(this.chartData)); legend(this.$.legend, eval(this.chartData));} else
+                if(this.chartType=="Pie" || this.chartType=="pie")
+                {
+                    new Chart(this.$.chart.getContext('2d')).Pie(eval(this.chartData));
+                    legend(this.$.legend, eval(this.chartData));
+                } else
                 if(this.chartType=="Bar" || this.chartType=="bar")
                 {
                     /*BAR CHART PHONE RES FIX - RESIZE CANVAS ON SMALL WINDOW SIZE*/
