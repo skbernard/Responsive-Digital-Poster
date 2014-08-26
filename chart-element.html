@@ -102,6 +102,7 @@
                 if(this.chartType=="Pie" || this.chartType=="pie") {new Chart(this.$.chart.getContext('2d')).Pie(eval(this.chartData)); legend(this.$.legend, eval(this.chartData));} else
                 if(this.chartType=="Bar" || this.chartType=="bar")
                 {
+                    /*BAR CHART PHONE RES FIX - RESIZE CANVAS ON SMALL WINDOW SIZE*/
                     if($(window).width()<481) {canvas.setAttribute("height","300"); canvas.setAttribute("style","height: 300px;");}
                     new Chart(this.$.chart.getContext('2d')).Bar(eval(this.chartData), {scaleBeginAtZero : false});
                     this.$.legend.style.display="none";
