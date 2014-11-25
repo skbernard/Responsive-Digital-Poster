@@ -108,6 +108,8 @@
                     {label: "Other",                                                                title: "Other",              value: 12.1,    color: "#fcd5a7",   highlight: "#fcd5a7"}
                 ];
 
+                Chart.defaults.global.animation = false;
+
                 if(this.chartType=="Pie" || this.chartType=="pie")
                 {
                     new Chart(this.$.chart.getContext('2d')).Pie(eval(this.chartData));
@@ -121,7 +123,7 @@
                     this.$.legend.style.display="none";
                 }
 
-                Chart.defaults.global.animation = false;
+
             }
        });
     </script>
