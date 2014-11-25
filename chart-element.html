@@ -24,8 +24,15 @@
         Polymer('chart-element', {
             domReady: function () {
 
-                Chart.defaults.global.responsive = true;
-                Chart.defaults.global.animation = false;
+                //Chart.defaults.global.responsive = true;
+                //Chart.defaults.global.animation = false;
+
+                Chart.defaults.global = {
+                    // Boolean - Whether to animate the chart
+                    animation: false,
+                    // Boolean - whether or not the chart should be responsive and resize when the browser does.
+                    responsive: false
+                };
 
                 /*IOS CANVAS RENDER HACK*/
                 var canvas = document.createElement('canvas');
