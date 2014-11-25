@@ -25,7 +25,7 @@
             domReady: function () {
 
                 //Chart.defaults.global.responsive = true;
-                Chart.defaults.global.animation = false;
+
 
                 /*Chart.defaults.global = {
                     // Boolean - Whether to animate the chart
@@ -120,6 +120,8 @@
                     new Chart(this.$.chart.getContext('2d')).Bar(eval(this.chartData), {scaleBeginAtZero : false});
                     this.$.legend.style.display="none";
                 }
+
+                Chart.defaults.global.animation = false;
             }
        });
     </script>
