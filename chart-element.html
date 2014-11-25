@@ -11,6 +11,8 @@
             .content        {padding: 10px 00px 10px 00px; align: center;}
             .legend         {height: 95px; padding: 10px 00px 00px 00px;}
             #legend > span  {float: left; margin: 02px 02px 02px 02px; padding: 01px 01px 01px 01px;}
+            /*canvas          {width: 100% !important; max-width: 800px; height: auto !important;}*/
+
         </style>
 
         <div class='chartTitle'><b>{{chartTitleBold}}</b> {{chartTitle}}</div>
@@ -22,9 +24,10 @@
     </template>
     <script>
         Polymer('chart-element', {
-            domReady: function () {
+            ready: function () {
 
                 //Chart.defaults.global.responsive = true;
+                //Chart.defaults.global.animation = false;
 
 
                 /*Chart.defaults.global = {
@@ -101,24 +104,29 @@
                 ];
 
                 var dataFigure7 = [
-                    {label: "Congresses will not allow digital posters to replace printed posters", title: "Not Allow",          value: 33.6,    color: "#f8991d",   highlight: "#f8991d"},
-                    {label: "Congresses will slowly integrate digital poster presentations",        title: "Slowly Integrate",   value: 9.3,     color: "#004b8d",   highlight: "#004b8d"},
-                    {label: "Congresses will move toward all digital poster presentations ",        title: "All Digital",        value: 27.1,    color: "#a4b2d4",   highlight: "#a4b2d4"},
-                    {label: "Don't Know",                                                           title: "Don't Know",         value: 11.5,    color: "#c1c5c9",   highlight: "#c1c5c9"},
-                    {label: "Other",                                                                title: "Other",              value: 12.1,    color: "#fcd5a7",   highlight: "#fcd5a7"}
+                    {label: "Not Allow",        title: "Not Allow",          value: 33.6,    color: "#f8991d",   highlight: "#f8991d"},
+                    {label: "Slowly Integrate", title: "Slowly Integrate",   value: 9.3,     color: "#004b8d",   highlight: "#004b8d"},
+                    {label: "All Digital",      title: "All Digital",        value: 27.1,    color: "#a4b2d4",   highlight: "#a4b2d4"},
+                    {label: "Don't Know",       title: "Don't Know",         value: 11.5,    color: "#c1c5c9",   highlight: "#c1c5c9"},
+                    {label: "Other",            title: "Other",              value: 12.1,    color: "#fcd5a7",   highlight: "#fcd5a7"}
                 ];
 
-                Chart.defaults.global.animation = false;
+                if($(window).width()>980 ) {canvas.setAttribute("width","600px"); canvas.setAttribute("height","600px");}
+                if($(window).width()>701 && $(window).width()<980 ) {canvas.setAttribute("width","350px"); canvas.setAttribute("height","350px");}
+                if($(window).width()>481 && $(window).width()<700 ) {canvas.setAttribute("width","400px"); canvas.setAttribute("height","400px");}
+                if($(window).width()<480) {canvas.setAttribute("width","250px"); canvas.setAttribute("height","300px");}
+
+                /* for 980px or less */
+                /* for 700px or less - iPhone Landscape */
+                /* for 480px or less - iPhone Portrait*/
 
                 if(this.chartType=="Pie" || this.chartType=="pie")
                 {
-                    new Chart(this.$.chart.getContext('2d')).Pie(eval(this.chartData));
+                    new Chart(this.$.chart.getContext('2d')).Pie(eval(this.chartData), {responsive: true, animation: false});
                     legend(this.$.legend, eval(this.chartData));
                 } else
                 if(this.chartType=="Bar" || this.chartType=="bar")
                 {
-                    /*BAR CHART PHONE RES FIX - RESIZE CANVAS ON SMALL WINDOW SIZE*/
-                    if($(window).width()<481) {canvas.setAttribute("height","300"); canvas.setAttribute("style","height: 300px;");}
                     new Chart(this.$.chart.getContext('2d')).Bar(eval(this.chartData), {scaleBeginAtZero : false});
                     this.$.legend.style.display="none";
                 }

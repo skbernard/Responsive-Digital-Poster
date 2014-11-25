@@ -1,7 +1,9 @@
 
 html,body         {height: 100%; margin: 0; background-color: #E5E5E5; font-family: sans-serif; font-size: 100%;}
+canvas            {width: 100% !important;  height: auto !important;}
 
 core-header-panel {height: 100%; overflow: auto; -webkit-overflow-scrolling: touch; background: #a6a6a6;}
+
     .core-header      {height: 55px;   background: #004b8d; padding: 5px; color: #ffffff; transition: height 0.2s;}
     .core-header.tall {height: 130px;}
 
@@ -51,6 +53,4 @@ core-header-panel {height: 100%; overflow: auto; -webkit-overflow-scrolling: tou
     .core-header      {height: 85px;}
     .core-header.tall {height: 170px;}
     .headerAuthor     {margin: 10px 2px 2px 2px;}
-
 }
-
